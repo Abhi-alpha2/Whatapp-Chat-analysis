@@ -31,8 +31,8 @@ if uploaded_file is not None:
     user_list = df['User'].unique().tolist()
 
     # removing the groupnotification
-    
-    user_list.remove('Group Notification')
+    if 'Group Notification' in user_list:
+        user_list.remove('Group Notification')
 
     # organinsing things
     user_list.sort()
